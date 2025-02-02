@@ -17,6 +17,12 @@ func (suite *IDTestSuite) SetupSuite() {
 	// Qualquer configuração de inicialização, se necessário
 }
 
+// TestCreateID testa deve criar um ID
+func (suite *IDTestSuite) TestCreateID() {
+	id := CreateID()
+	suite.NotNil(id, "O ID não deve ser nulo")
+}
+
 // TestNewIDFromString testa a criação de ID a partir de uma string válida.
 func (suite *IDTestSuite) TestNewIDFromString() {
 	idString := "550e8400-e29b-41d4-a716-446655440000"

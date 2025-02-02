@@ -30,3 +30,8 @@ func NewID(value interface{}) (*ID, error) {
 		return nil, errors.NewValidationError(fmt.Sprintf("unsupported type: %T", value))
 	}
 }
+
+// CreateID cria um novo UUID de ID
+func CreateID() *ID {
+	return &ID{value: uuid.New()}
+}
